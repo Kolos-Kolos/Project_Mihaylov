@@ -7,11 +7,16 @@ while True:
         c = int(input('Введите третье целое число: '))
         break
     except ValueError:
-        print("Все числа должны быть целыми")
+        print("Число должно быть целым")
+count_positive = 0
+if a > 0:
+    count_positive += 1
+if b > 0:
+    count_positive += 1
+if c > 0:
+    count_positive += 1
 
-k = 0
-if a > 0: k += 1
-if b > 0: k += 1
-if c > 0: k += 1
-
-print("Ровно два числа положительные5", k == 2)
+if count_positive == 2:
+    print("Истина: ровно два из чисел являются положительными")
+else:
+    print("Ложь: количество положительных чисел не равно двум")
